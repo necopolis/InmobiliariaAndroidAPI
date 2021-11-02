@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_map">
+
+    <fragment
+        android:id="@+id/nav_map"
+        android:name="com.avaca.inmobiliariaandroid.ui.home.MapsInmobiliariaFragment"
+        android:label="@string/menu_ubicacion"
+        tools:layout="@layout/fragment_maps_inmobiliaria" />
+
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.avaca.inmobiliariaandroid.ui.perfil.PerfilFragment"
+        android:label="@string/menu_perfil"
+        tools:layout="@layout/fragment_perfil" />
+
+    <fragment
+        android:id="@+id/nav_inmueble"
+        android:name="com.avaca.inmobiliariaandroid.ui.inmueble.InmuebleFragment"
+        android:label="@string/menu_inmueble"
+        tools:layout="@layout/fragment_inmueble" >
+        <action
+            android:id="@+id/action_nav_inmueble_to_inmuebleDetalleFragment"
+            app:destination="@id/inmuebleDetalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_inquilino"
+        android:name="com.avaca.inmobiliariaandroid.ui.inquilino.InquilinoFragment"
+        android:label="@string/menu_inquilino"
+        tools:layout="@layout/fragment_inquilino" >
+        <action
+            android:id="@+id/action_nav_inquilino_to_inquilinoDetalleFragment"
+            app:destination="@id/inquilinoDetalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_contrato"
+        android:name="com.avaca.inmobiliariaandroid.ui.contrato.ContratoFragment"
+        android:label="@string/menu_contrato"
+        tools:layout="@layout/fragment_contrato" >
+        <action
+            android:id="@+id/action_nav_contrato_to_contratoDetalleFragment"
+            app:destination="@id/contratoDetalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inmuebleDetalleFragment"
+        android:name="com.avaca.inmobiliariaandroid.ui.inmueble.InmuebleDetalleFragment"
+        android:label="Inmueble"
+        tools:layout="@layout/inmueble_detalle_fragment" >
+        <action
+            android:id="@+id/action_inmuebleDetalleFragment_to_nav_inmueble"
+            app:destination="@id/nav_inmueble" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.avaca.inmobiliariaandroid.ui.logout.LogoutFragment"
+        android:label="@string/menu_logout"
+        tools:layout="@layout/logout_fragment" />
+    <fragment
+        android:id="@+id/inquilinoDetalleFragment"
+        android:name="com.avaca.inmobiliariaandroid.ui.inquilino.InquilinoDetalleFragment"
+        android:label="Inquilino" >
+        <action
+            android:id="@+id/action_inquilinoDetalleFragment_to_nav_inquilino"
+            app:destination="@id/nav_inquilino" />
+    </fragment>
+    <fragment
+        android:id="@+id/contratoDetalleFragment"
+        android:name="com.avaca.inmobiliariaandroid.ui.contrato.ContratoDetalleFragment"
+        android:label="Contrato" />
+    <fragment
+        android:id="@+id/pagoFragment"
+        android:name="com.avaca.inmobiliariaandroid.ui.pago.PagoFragment"
+        android:label="Detalle de Pagos"
+        tools:layout="@layout/pago_fragment" />
+</navigation>

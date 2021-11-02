@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/frameLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EADA75">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.contrato.ContratoDetalleFragment">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="Informacion del contrato"
+        android:textColor="#050505"
+        android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Codigo Contrato" />
+
+        <TextView
+            android:id="@+id/tvCodigoContrato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Fecha Inicio" />
+
+    <TextView
+        android:id="@+id/tvFechaInicioContrato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#050505"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Fecha Finalizacion" />
+
+    <TextView
+        android:id="@+id/tvFechaFinContrato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#050505"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Monto de Alquiler" />
+
+    <TextView
+        android:id="@+id/tvMontoContrato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#050505"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Inquilino" />
+
+    <TextView
+        android:id="@+id/tvInqNomContrato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#050505"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Direccion Inmueble" />
+
+        <TextView
+        android:id="@+id/tvInmuebleDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#050505"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"/>
+
+        <Button
+            android:id="@+id/btnVerPagos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp"
+            android:text="Ver Pagos" />
+
+    </LinearLayout>
+
+
+</ScrollView>
