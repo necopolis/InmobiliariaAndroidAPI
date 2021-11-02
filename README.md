@@ -4,7 +4,7 @@ Inmobiliaria que consume recursos de api en .net 5
 # Avaca_Mario_Inmobiliaria_Movil_API
 
 ## Para Loguin:
-### Admin
+### Propietario
 - Usuario: mario@correo.com
 - Contraseña: 1234
 
