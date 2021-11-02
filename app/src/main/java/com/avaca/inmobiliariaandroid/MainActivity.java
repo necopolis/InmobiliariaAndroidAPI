@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 nombreProp.setText(response.body().getNombre() + " " + response.body().getApellido());
                 emailProp.setText(response.body().getEmail());
                     Glide.with(context.getApplicationContext())
-                            .load(response.body().getAvatar())
+                            .load(ApiClient.getConecion()+response.body().getAvatar())
                             .diskCacheStrategy(DiskCacheStrategy.ALL)
                             .into(ivPropietario);
 

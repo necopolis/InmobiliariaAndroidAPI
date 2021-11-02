@@ -44,7 +44,7 @@ public class PerfilFragment extends Fragment {
                 binding.edtNombre.setText(propietario.getNombre());
                 binding.edtApellido.setText(propietario.getApellido());
                 binding.edtEmail.setText(propietario.getEmail());
-                binding.edtPassword.setText("");
+                binding.edtPassword.setText(propietario.getClave());
                 binding.edtTelefono.setText(propietario.getTelefono());
             }
         });
@@ -94,7 +94,7 @@ public class PerfilFragment extends Fragment {
                 EditadoP.setNombre(binding.edtNombre.getText().toString());
                 EditadoP.setApellido(binding.edtApellido.getText().toString());
                 EditadoP.setEmail(binding.edtEmail.getText().toString());
-                EditadoP.setContraseña(binding.edtPassword.getText().toString());
+                EditadoP.setClave(binding.edtPassword.getText().toString());
                 EditadoP.setTelefono(binding.edtTelefono.getText().toString());
                 EditadoP.setActivo(true);
                 //Se modifico la api para que se vean los cambios realizados
@@ -102,7 +102,7 @@ public class PerfilFragment extends Fragment {
                 mViewModel.bloquearCampor();
             }
         });
-        mViewModel.PropietarioActual();
+        //mViewModel.ActualizarPantalla();
         mViewModel.bloquearCampor();
         return root;
     }

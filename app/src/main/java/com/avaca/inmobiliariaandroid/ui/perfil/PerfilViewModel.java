@@ -37,6 +37,7 @@ public class PerfilViewModel extends AndroidViewModel {
         super(application);
         context=application.getApplicationContext();
         token = ApiClient.token().getString("token", "");
+        PropietarioActual();
         //propietarioMT.setValue(api.obtenerUsuarioActual());
 
     }
@@ -82,16 +83,16 @@ public class PerfilViewModel extends AndroidViewModel {
     public void GuardarDatos(Propietario p){
         //this.api.actualizarPerfil(p);
         Log.d("exc", "Propietario");
-        Log.d("exc", p.getApellido()+"  "+p.getEmail()+" "+p.getContraseña()+" "+ p.getActivo());
-        Call<Propietario> propietarioPerfil= ApiClient.getMyApiClient().actualizarPerfil(token,p);
-        propietarioPerfil.enqueue(new Callback<Propietario>() {
+        Log.d("exc", p.getApellido()+"  "+p.getEmail()+" "+p.getClave()+" "+ p.isActivo());
+        Call<Propietario> Perfil= ApiClient.getMyApiClient().actualizarPerfil(token,p);
+        Perfil.enqueue(new Callback<Propietario>() {
             @Override
             public void onResponse(Call<Propietario> call, Response<Propietario> response) {
                 if (response.isSuccessful()){
+                    propietarioMT.setValue(response.body());
                     BTNGuardarMT.setValue(false);
                     BTNEditarMT.setValue(true);
                     CamposMT.setValue(false);
-                    Log.d("exc", "Entro a actualizar perfil");
                     toastMT.setValue("Datos guardados correctamente");
                 }else{
                     toastMT.setValue("No se Guardo");
@@ -101,11 +102,10 @@ public class PerfilViewModel extends AndroidViewModel {
 
             @Override
             public void onFailure(Call<Propietario> call, Throwable t) {
+                Log.d("exc", t.getMessage());
                 toastMT.setValue("Error");
-                Log.d("exc",t.getMessage());
             }
         });
-        propietarioMT.setValue(p);
 
 
     }

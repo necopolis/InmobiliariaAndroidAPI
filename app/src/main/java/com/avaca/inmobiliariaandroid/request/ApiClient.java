@@ -80,10 +80,10 @@ public class ApiClient {
                 @Header("Authorization") String token);
 
         //ModificarPerfil
-        @PUT("Propietarios")
+        @PUT("Propietarios/actualizar")
         Call<Propietario> actualizarPerfil(
                 @Header("Authorization") String token,
-                @Body Propietario pn);
+                @Body Propietario propietario);
 
         //Inmuebles
         //Lista de Inmuebles
