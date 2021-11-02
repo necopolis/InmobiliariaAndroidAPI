@@ -7,6 +7,7 @@ import com.avaca.inmobiliariaandroid.modelo.Contrato;
 import com.avaca.inmobiliariaandroid.modelo.Garante;
 import com.avaca.inmobiliariaandroid.modelo.Inmueble;
 import com.avaca.inmobiliariaandroid.modelo.Inquilino;
+import com.avaca.inmobiliariaandroid.modelo.Pago;
 import com.avaca.inmobiliariaandroid.modelo.Propietario;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;;
@@ -29,10 +30,10 @@ import retrofit2.http.Url;
 
 
 public class ApiClient {
-    private static final String UrlBase = "http://192.168.0.106:45465/api/";
+    private static final String UrlBase = "http://192.168.0.106:45457/api/";
     private static PostInterface postInterface;
     private static SharedPreferences token;
-    private static final String conecion= "http://192.168.0.106:45465/";;
+    private static final String conecion= "http://192.168.0.106:45457/";;
 
     public static SharedPreferences conectar(Context context) {
         if (token==null){
@@ -142,6 +143,9 @@ public class ApiClient {
 
         @PUT("Inmuebles")
         Call<Inmueble> actualizar(@Header("Authorization") String token,@Body Inmueble idInmueble);
+
+        @GET("Pagos/{id}")
+        Call<ArrayList<Pago>> pagosPorContrato(@Header("Authorization") String token, @Path("id") int contratoId);
 
     }
 
